@@ -1,0 +1,117 @@
+/* Gesamte Seite */
+body {
+    background-color: rgb(51, 51, 51);
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    height: 100px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+/* Tabelle */
+table {
+    border-collapse: collapse; /* sorgt für durchgehende Linien */
+}
+
+/* Tabellenzellen */
+td {
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Nur innere Rahmen anzeigen (keine äußere Umrandung) */
+tr:first-child td {
+    border-top: none;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+td:first-child {
+    border-left: none;
+}
+td:last-child {
+    border-right: none;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #00b4db, #0083b0);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #00b4db, #0083b0);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes drawCircle {
+    from {
+        stroke-dashoffset: 188.5;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawLine {
+    from {
+        stroke-dasharray: 60;
+        stroke-dashoffset: 60;
+    }
+    to {
+        stroke-dasharray: 60;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes drawWinningLine {
+    from {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+    }
+    to {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 0;
+    }
+}
